@@ -1,0 +1,344 @@
+
+/* Reset de márgenes y padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: rgb(235, 220, 203);
+}
+
+
+/* Estilos de la cabecera */
+.header-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.7s;
+    padding: 15px 10px;
+    z-index: 10;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    position: relative;
+    display: flex;
+}
+li{
+    list-style: none;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;  
+}
+
+.nav-menu ul li a:hover {
+    color: #ff7f00;
+}
+
+
+/* Ajustes de pantalla pequeña */
+@media (max-width: 768px) {
+    .nav-menu ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+}
+
+/* Banner */
+.banner_portada {
+    width: 100vw;
+    height: 85vh;
+    background-image: url('../imagenes/kriss-4vshGb2OXOY-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.banner_content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.banner_content h2 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.banner_content h1 {
+    font-size: 3em;
+    margin: 0.5em 0;
+}
+
+.banner_content p {
+    font-size: 1.2em;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Ajustes responsivos del banner */
+@media (max-width: 768px) {
+    .banner_content h2 { font-size: 1.5em; }
+    .banner_content h1 { font-size: 2em; }
+    .banner_content p { font-size: 1em; }
+}
+
+/* Contenedor principal de la página */
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 5px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.contenedor-principal h2 {
+    font-size: 2em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.contenedor-principal p {
+    font-size: 1.2em;
+    color: #000000;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Sección de paquetes más recorridos */
+.paquetes-recorridos {
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.paquetes-recorridos h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Contenedor de las tarjetas */
+.tarjetas-paquetes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las tarjetas */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilo de cada tarjeta */
+.tarjeta {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen dentro de la tarjeta */
+.tarjeta img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+/* Descripción de la tarjeta */
+.descripcion-paquete {
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.descripcion-paquete h3, .descripcion-paquete p {
+    margin: 0;
+    padding: 5px 0;
+    color: #333;
+}
+
+/* Contenido de hover */
+.hover-texto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 127, 0, 0.9);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    gap: 10px;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Icono en hover */
+.hover-texto i {
+    font-size: 1.5em;
+}
+
+/* Imagen adicional en hover */
+.hover-texto .hover-img {
+    width: 80px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Párrafo adicional en hover */
+.hover-texto .hover-parrafo {
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+/* Mostrar contenido hover */
+.tarjeta:hover .hover-texto {
+    opacity: 1;
+}
+
+/* Ocultar imagen y descripción en hover */
+.tarjeta:hover img,
+.tarjeta:hover .descripcion-paquete {
+    opacity: 0;
+}
+
+/* Ajustes de tarjetas para pantallas pequeñas */
+@media (max-width: 768px) {
+    .tarjeta {
+        width: 90%;  /* Tarjetas ocupan el 90% del ancho en pantallas pequeñas */
+    }
+}
+
+
+
+/*--- -----todo esto es pie de pagina--------*/
+footer{
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+.containerLogoPie{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.contactoPie{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.logoPie{
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.pie{
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.logoPie img{
+    width: 300px;
+}
+.contactoPie{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.contactoPie div{
+    text-align: center;
+    font-size: 0.9rem;
+}
+.contactoPie i{
+    display: block;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+.pieLinks{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding: 20px;
+}
+.pieLinks h3{
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+.pieLinks p{
+    text-align: center;
+    padding: 10px;
+}
+.containerSocial{
+    margin: 0 auto;
+}
+.pieSocial{
+    margin-top: 20px;
+
+}
+.pieSocial a{
+    color: white;
+    margin: 0 10px;
+    font-size: 25px;
+}
+.pieSocial a:hover{
+    color: lightseagreen;
+}
+
+
+

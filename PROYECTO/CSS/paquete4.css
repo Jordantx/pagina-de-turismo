@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #E0E0E0;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.7s;
+    padding: 15px 10px;
+    z-index: 10;
+    background-color: black;
+}
+header.abajo{
+    background: white;
+    padding: 15px 20px;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li{
+    list-style: none;
+}
+a{
+    position: relative;
+    font-family: Helvetica;
+    margin: 0px 15px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0.7s;
+}
+.zona1{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('../imagenes/PORTADA.png');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+header.abajo a{
+    color: black;
+}
+#logo{
+    width: 190px;
+    height: 35px;
+}
+#titulo{
+    font-size: 40px;
+    color: chocolate;
+}
+.zona2{
+    padding: 20px;
+    margin: 20px;
+}
+.oferta-especial {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+}
+.oferta-header {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+}
+
+.precio p {
+    font-size: 20px;
+    color: gray;
+    margin: 20px 0;
+}
+
+.precio span {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+#zona2P1 {
+    flex: 1;
+    margin-right: 90px;
+
+}
+#zona2P2 {
+    flex: 0 auto;
+}
+.contenido {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+#texto01{
+    text-align: justify;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#padreCarrusel{
+    width: 600px;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+
+    margin-top: 20px;
+    position: relative;
+}
+
+#hijoCarrusel{ 
+    width: 300%;
+    height: 100%;
+    display: flex;
+}
+.caru{
+    width: 600px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+
+  
+}
+
+#containerImg01, #containerImg02, #containerImg03{
+    width: calc(100% / 3);
+    height: 100%;
+}
+#btn-left, #btn-right{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    color: black;
+    transform: translate(0, -50%);
+    transition: .5s ease;
+    user-select: none;
+}
+#btn-left:hover, #btn-right:hover{
+    background-color: darkslategray;
+    color: white;
+}
+
+
+#btn-left{
+    left: 10px;
+}
+#btn-right{
+    right: 10px;
+}
+#contenido2{
+    display: flex;
+}
+#Garantia{
+   height: 300px;
+   margin: 10px;
+   text-align: center;
+}
+.containerGarantia{
+    height: 150px;
+}
+.containerGarantia p{
+    width: 300px;
+    text-align: center;
+    margin: 0px 100px 10px 100px;
+}
+.containerGarantia h3{
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.iconoGarantia{
+    font-size: 50px;
+}
+.zona3 h1{
+    text-align: center;
+    padding: 30px 0;
+    font-size: 30px;
+}
+.center-container {
+    display: flex;
+    justify-content: center;
+}
+.tab-container {
+    display: inline-flex;
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #ddd;
+    padding: 5px 0;
+}
+
+.tab-button {
+    padding: 15px 50px;
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.tab-button.active {
+    background-color: #FFA500;
+    color: #fff;
+    border-bottom: 4px solid #FFA500;
+}
+
+.tab-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    display: none;
+}
+
+.tab-content h2 {
+    color: #333;
+}
+
+.day {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.icon {
+    color: orange;
+    margin-right: 10px;
+    font-size: 20px;
+}
+#hola:hover{
+    color: red;
+}
+#hola{
+    color: black;
+    font-size: 30px;
+}
+footer{
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+.containerLogoPie{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+.logoPie{
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.pie{
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.logoPie img{
+    width: 300px;
+}
+.contactoPie{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.contactoPie div{
+    text-align: center;
+    font-size: 0.9rem;
+}
+.contactoPie i{
+    display: block;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+.pieLinks{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding: 20px;
+}
+.pieLinks h3{
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+.pieLinks p{
+    text-align: center;
+    padding: 10px;
+}
+.containerSocial{
+    margin: 0 auto;
+}
+.pieSocial{
+    margin-top: 20px;
+
+}
+.pieSocial a{
+    color: white;
+    margin: 0 10px;
+    font-size: 25px;
+}
+.pieSocial a:hover{
+    color: lightseagreen;
+}
